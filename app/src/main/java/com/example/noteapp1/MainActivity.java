@@ -1,5 +1,6 @@
 package com.example.noteapp1;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -31,6 +32,11 @@ public class MainActivity extends AppCompatActivity {
         //handlers threads
         setUI();
 
+    }
+
+    public void openUser() {
+        Intent intent = new Intent(this, UserActivity.class);
+        startActivity(intent);
     }
 
     public void createUser(View view) {

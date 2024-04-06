@@ -11,7 +11,7 @@ import java.util.List;
 @Dao
 public interface UserDAO {
     @Query("SELECT * FROM user")
-   List<User> getAll();
+   LiveData<List<User>> getAll();
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     void insert(User user);
 }
